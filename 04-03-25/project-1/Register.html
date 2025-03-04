@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: whitesmoke;
+    }
+    #header{
+        background-color: rgb(32, 33, 130);
+        width:100%;
+        top: 0;
+        left:0;
+        position:fixed;
+        height:80px;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .center{
+        position: absolute;
+        left: 575px;
+        top:15%;
+        width: 500px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    footer{
+        background-color: rgba(0, 0, 128, 0.677);
+        width:auto;
+        padding:10px;
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    #p5{
+        text-align: center;
+        color: whitesmoke;
+    }
+    #p1{
+        font-size: 15px;
+    }
+    #button1{
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    #button1:hover{
+        background-color: chartreuse;
+    }
+    #button2{
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    #button2:hover{
+        background-color: rgba(255, 0, 34, 0.805)
+    }
+</style>
+<body>
+    <div id="header">
+        <h1>Student's Connect</h1>
+    </div>
+    <main>
+        <div class="center">
+            <h1>Welcome to Student Connect</h1>
+            <form>
+                <label style="font-size: 15px;">First Name:</label>
+                <input type="text" name="firstname" id="firstname" required><br>
+                <br>
+                <label style="font-size: 15px;">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" required><br>
+                <br>
+                <label style="font-size: 15px;">Email:</label>      
+                <input type="email" name="email" id="email" required><br>
+                <br>
+                <label style="font-size: 15px;">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" required><br>
+                <br>
+                <label style="font-size: 15px">DOB:</label>
+                <input type="date" name="dob" id="dob" required><br>
+                <br>
+                <label style="font-size: 15px;">Username:</label>
+                <input type="text" name="username" id="username" required><br>
+                <br>
+                <label style="font-size: 15px;">Password:</label>
+                <input type="password" name="password" id="password" required><br>
+            </form>
+            <br>
+            <button id="button1" style="font-size: 25px;">Register</button>
+            <button id="button2" style="font-size: 25px;">Reset</button>
+        </div>
+    </main>
+    <footer>
+        <p id="p5">Copyrighted web page</p>
+        <p id="p5">@2025 @SISTPLACEMENT</p>
+    </footer>
+</body>
+</html>
