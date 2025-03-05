@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Cuisine</title>
+    <link rel="icon" type="image/png" href="thai-logo.avif">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightgrey;
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            background-color: whitesmoke;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu-icon {
+            font-size: 24px;
+            color: black;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            gap: 100px;
+            justify-content: center;
+        }
+        .container img {
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .content {
+            max-width: 500px;
+        }
+        .discount {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .content h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .content p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            gap: 40px;
+            margin: 100px auto;
+            text-align: center;
+            align-items: center;
+        }
+        .feature img {
+            width: 100px;
+            border-radius: 25%;
+            margin-bottom: 10px;
+        }
+        .menu-button {
+            display: block;
+            width: fit-content;
+            margin: 50px auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 50px;
+            width: 100%;
+            background-color:whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer-links {
+            display: flex;
+            gap: 60px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* flex box */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  
+            grid-template-rows: repeat(3, 1fr);    
+            gap: 10px;
+            padding: 20px; 
+            width: 80%;
+            max-width: 1200px;
+            height: 80vh; 
+            padding: center; 
+        }
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .grid-item:nth-child(1) {
+            grid-column: span 2;  
+            grid-row: span 2;    
+        }
+        .grid-item:nth-child(2) {
+            grid-column: span 1;   
+            grid-row: span 1;    
+        }
+        .grid-item:nth-child(3) {
+            grid-column: span 1;
+            grid-row: span 2;      
+        }
+        .grid-item:nth-child(4) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .grid-item:hover img {
+            transform: scale(1.1);  
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header-content">
+            <img src="thai logo.avif" alt="logo" width="80px" height="80px">
+            <p style="font-size: 20px; margin-top: 5px;">Thai Cuisine</p>
+        </div>
+        <div class="menu-icon">&#9776;</div>
+    </div>
+    <main>
+        <div class="container">
+            <img src="Pad-Thai.jpg" alt="Pad Thai">
+            <div class="content">
+                <div class="discount">75% Off on Some Special Dishes</div>
+                <h1>Enjoy Our <br> Delicious Thai Foods</h1>
+                <p>Thai cuisine includes the country's traditional and regional dishes, which have evolved over centuries of cultural influences, local ingredients, and culinary innovations.</p>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <img src="fresh food.jpg" alt="Fresh Food">
+                <h3>Fresh Food</h3>
+                <p>We use only the freshest ingredients in all our dishes.</p>
+            </div>
+            <div class="feature">
+                <img src="Healthy Food.avif" alt="Healthy Food">
+                <h3>Healthy Food</h3>
+                <p>Our dishes are crafted with health in mind.</p>
+            </div>
+            <div class="feature">
+                <img src="food delivery.avif" alt="Home Delivery">
+                <h3>Fast Home Delivery</h3>
+                <p>We guarantee fast delivery in under 20 minutes.</p>
+            </div>
+        </div>
+        <a href="Menu.html" class="menu-button">Our Menu</a>
+    </main>
+     
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="Tom yum goong.avif"Image 1">
+        </div>
+        <div class="grid-item">
+            <img src="pad-thai.avif" alt="Image 2">
+        </div>
+        <div class="grid-item">
+            <img src="Khao soi.avif" alt="Image 3">
+        </div>
+        <div class="grid-item">
+            <img src="Som tom.avif" alt="Image 4">
+        </div>
+        
+    
+    </div>
+
+    <div class="footer">
+        <img src="thai logo.avif" alt="logo" width="120px" height="120px">
+        <div class="footer-links">
+            <div>
+                <a href="#">Order Tracking</a>
+                <a href="#">New Order</a>
+                <a href="#">Contact Us</a>
+                <a href="#">News & Blogs</a>
+            </div>
+            <div>
+                <a href="#">Help & Support</a>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
