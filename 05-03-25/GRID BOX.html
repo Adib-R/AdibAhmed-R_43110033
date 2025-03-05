@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr); 
+}
+.grid-item {
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+.grid-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 0.3s ease; 
+}
+.grid-item img:hover {
+  transform: scale(1.1); 
+}
+.item1 {
+  grid-column: 1 / span 2; 
+  grid-row: 1;
+}
+.item2 {
+  grid-column: 3;
+  grid-row: 1 / span 2; 
+}
+.item5 {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item item1">
+    <img src="Som tom.avif" alt="">
+  </div>
+  <div class="grid-item item2">
+    <img src="Khao soi.avif" alt="">
+  </div>
+  <div class="grid-item">
+    <img src="pad-thai.avif" alt="">
+  </div>
+  <div class="grid-item">
+    <img src="Tom yum goong.avif" alt="">
+  </div>
+  <div class="grid-item item5">
+    <img src="2.avif" alt="">
+  </div>
+</div>
+</body>
+</html> 
+

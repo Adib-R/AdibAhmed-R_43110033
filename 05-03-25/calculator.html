@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:rgb(236, 221, 221);
+            
+        }
+        .calculator {
+            width: 250px;
+            background: rgb(255, 192, 82);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 22%;
+            height: 50px;
+            font-size: 1.2em;
+            margin: 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <br>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>C</button>
+        <br>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>+</button>
+        <br>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <br>
+        <button>0</button>
+        <button>/</button>
+        <button>=</button>
+        <button>*</button>
+        <br>
+        <!-- <button>/</button> -->
+    </div>
+</body>
+</html>
