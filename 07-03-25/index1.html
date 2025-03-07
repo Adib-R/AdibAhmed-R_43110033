@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            width: 100%;
+            height: 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #1212121b;
+            border: 1px solid #121212;
+        }
+        .nav-brand img{
+            padding: 5px 10px;
+            margin: 3px;
+            text-decoration: none;
+            color: #121212;
+            width:50px;
+            height: 40px;
+        }
+        .nav-brand {
+            height: 80%;
+            padding: 0px 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+        .nav-info {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-info > a {
+            padding: 5px 10px;
+            margin: 3px;
+            text-decoration: none;
+            color: #121212;
+        }
+        .nav-signup {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-signup > img , .nav-signup > button {
+            margin: 10px;
+            height: 50px;x;
+            width:50px
+            
+
+        }
+        .btn-signup {
+            background-color: #12121200;
+            padding: 5px 15px;
+            border: 1px solid #121212;
+            border-radius: 10px;
+            
+        }
+        .poster {
+            width: 80%;
+            height: 450px;
+            margin: 40px 0px;
+            border-radius: 20px;
+        }
+        .poster-info {
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+
+            background-color: seagreen;
+            margin-top: -304px;
+            color: #ffffff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .poster-info > h2 , .poster-info > p {
+            width: 50%;
+            text-align: center;
+        }
+        
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: steelblue;
+            }
+            .nav-info, .poster-info > p{
+                display: none;
+            }
+        }
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px 0;
+}
+.content-container > explore{
+    flex: 1; /
+    padding: 20px;
+    text-align: left;
+}
+.content-container img
+{
+    width: 100px;
+    height: 200px;
+    border-radius: 40%;
+    margin-right: 40px
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-brand">
+            <img src="logo2.jpg">
+            <p>brand</p>
+        </div>
+        <div class="nav-info">
+            <a href="/">Home</a>
+            <a href="/">Menu</a>
+            <a href="/">Contact us</a>
+        </div>
+        <div class="nav-signup">
+            <img src="cart.png" />
+            <button class="btn-signup">Sign up</button>
+        </div>
+    </div>
+    <div class="poster">
+        <img src="background.jpg" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px;"/>
+        <div class="poster-info">
+            <h2>Order your favorite food here</h2>
+            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.</p>
+            <button class="btn-signup" style="background-color: #ffffff;">View Menu</button>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="explore">
+            <h2>EXPLORE</h2>
+            <p><strong>our tasty foods in our restaurant. Thanks for coming!</strong></p><br><br>
+            <img src="Khao soi.avif"Delicious Food" class="food-image">
+            <img src="Khao soi.avif"Delicious Food" class="food-image">
+            <img src="Khao soi.avif"Delicious Food" class="food-image">
+            <img src="Khao soi.avif"Delicious Food" class="food-image">
+            <img src="Khao soi.avif"Delicious Food" class="food-image">
+            
+           </div>
+           </div>
+           
+
+</body>
+</html>
