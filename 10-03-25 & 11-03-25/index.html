@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+        .navbar {
+            width: 100%;
+            height: 130px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #1e212e;
+            background-color: #EC2B0C;
+        }
+        .nav-brand {
+            height: 80%;
+            padding: 0px 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+        }
+        .nav-info {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-info > a {
+            padding: 5px 10px;
+            margin: 3px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .nav-signup {
+            height: 80%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-signup > img , .nav-signup > button {
+            margin: 10px;
+        }
+        .btn-signup {
+            background-color: whitesmoke;
+            padding: 8px 15px;
+            border: 2px solid #B0ABA1;
+            border-radius: 20px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .poster {
+            width: 80%;
+            height: 350px;
+            margin: 40px 0px;
+            border-radius: 20px;
+        }
+        .poster-info {
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+
+            background-color: #FA9396;
+            margin-top: -304px;
+            color: #ffffff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .poster-info > h2 , .poster-info > p {
+            width: 50%;
+            text-align: center;
+            
+        }
+        .expore {
+            width: 80%;
+            
+            margin-bottom: 100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            border-bottom: 1.5px solid #121212;
+        }
+        .expore-items {
+            width: 100%;   
+            height: 190px;    
+            display: flex;     
+            flex-direction: row;    
+            align-items: center;   
+            overflow-y:hidden;          
+            padding: 10px 0;    
+        }
+
+        .food-item {
+            width: 200px;
+            height: 100%;
+            margin-right: 20px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dishes-container {
+            width: 80%;
+            margin-top: -80px;
+        }
+
+        .dishes {
+            width: 100%;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .dish {
+            width: 300px;
+            height: 350px;
+            border: 1px solid #121212;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        .dish-image {
+            height: 50%;
+        }
+        .dish-container {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .dish-info {
+            width: 95%;
+        }
+        .dish-desc {
+            margin-top: -10px;
+            font-size: .9rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .nav-info, .poster-info > p{
+                display: none;
+            }
+        }
+        .footer {
+                background-color:#EC2B0C;
+                color:whitesmoke;
+                padding: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                margin: auto;
+            }
+            .footer-section {
+                flex: 1;
+                padding: 10px;
+            }
+            .footer-section h2 img {
+                width: 100px;
+                height: 100px;
+                    }
+            .footer-section h2, .footer-section h3 {
+                margin-bottom: 10px;
+            }
+            .footer-section ul {
+                list-style: none;
+                padding: 0;
+            }
+            .footer-section ul li {
+                margin-bottom: 5px;
+            }
+            .footer .contact-info {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px; 
+            }
+            .footer .contact-icon {
+                width: 24px;
+                height: 24px;
+            }
+            .footer-icons span {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+            .footer-icons span img {
+                width: 30px;
+                height: 30px;
+            }
+            .footer-copyright {
+                margin-top: 20px;
+              
+                padding-top: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-brand">
+            <img src="assets/logo/logo-5.png" style="object-fit: cover; width: 100%; height: 100%;"/>
+        </div>
+        <div class="nav-info">
+            <a href="/">Home</a>
+            <a href="/">Menu</a>
+            <a href="/">Contact us</a>
+        </div>
+        <div class="nav-signup">
+            <img src="assets/logo/Ligth/cart-1.png" />
+            <button class="btn-signup">Sign up</button>
+        </div>
+    </div>
+    <div class="poster">
+        <img src="assets/background/background-2.jpg" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px;"/>
+        <div class="poster-info">
+            <h2>Order your favorite food here</h2>
+            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.</p>
+            <button class="btn-signup" style="background-color: #ffffff;">View Menu</button>
+        </div>
+    </div>
+    <div class="expore">
+        <h2>Explore our menu</h2>
+        <p>Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+        <div class="expore-items"></div>
+    </div>
+    <div class="dishes-container">
+        <h2>Top dishes near you</h2>
+        <div class="dishes"></div>
+    </div>
+    <script>
+        const imageSrc = ["assets/Explore menu/1-salad.webp","assets/Explore menu/2-roll.webp","assets/Explore menu/3-Desert.webp","assets/Explore menu/4-sandwich.webp","assets/Explore menu/5-cake.webp","assets/Explore menu/6-pure Veg.webp","assets/Explore menu/7-pasta.webp","assets/Explore menu/8-noodles.webp","assets/Explore menu/9-Thai.jpg"]
+        const name = ["Salad", "Roll", "Deserts", "Sandwich", "Cake", "Pure Veg", "Pasta", "Noodles","Thai"]
+
+        let htmlData = ""
+        for(let i = 0; i < imageSrc.length; i++){
+            htmlData = htmlData + 
+           `<div class="food-item" id="food-item-${i}" onclick="update(this)">
+                 <img src="${imageSrc[i]}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;"/>
+                <p>${name[i]}</p>
+            </div>
+            \n
+            ` 
+        }
+        console.log(htmlData)
+        document.getElementsByClassName("expore-items")[0].innerHTML = htmlData
+
+        function updateSalad() {
+                const salad = [
+                    { imgSrc : 'assets/Salad/salad-1.png', name : 'Greek Salad', desc : 'A refreshing mix of fresh veggies and feta cheese.', price : 120,ratings : 4 },
+                    { imgSrc : 'assets/Salad/salad-2.png', name : 'Veg Salad', desc : 'A nutritious and delicious vegetarian salad.', price : 180,ratings : 4 },
+                    { imgSrc : 'assets/Salad/salad-3.png', name : 'Clover Salad', desc : 'A healthy and tasty choice for any meal.', price : 160,ratings : 4 },  
+                    { imgSrc : 'assets/Salad/salad-4.png',name : 'Chicken Salad',desc : 'Food provides essential nutrients for overall health and well-being',price : 240,ratings : 4}
+                ];
+                updateDishes(salad);
+            }
+        
+            function updateRolls() {
+                const rolls = [
+                    { imgSrc : 'assets/Rolls/roll-1.png', name : 'Spring Roll', desc : 'Crispy rolls filled with fresh veggies.', price : 150 },
+                    { imgSrc : 'assets/Rolls/roll-2.png', name : 'Chicken Roll', desc : 'Juicy chicken wrapped in soft roti.', price : 200 },
+                    { imgSrc : 'assets/Rolls/roll-3.png', name : 'Paneer Roll', desc : 'Delicious paneer and fresh veggies.', price : 180 }
+                ];
+                updateDishes(rolls);
+            }
+            function updateDeserts() {
+                const deserts = [
+                    { imgSrc : 'assets/Deserts/d-1.png', name : 'Ice Cream', desc : 'Delicious and creamy frozen treat.', price : 150 },
+                    { imgSrc : 'assets/Deserts/d-2.png', name : 'Waffles', desc : 'Crispy and fluffy waffles with toppings.', price : 200 },
+                    { imgSrc : 'assets/Deserts/d-3.png', name : 'Strawberry Mousse', desc : 'Light and airy strawberry dessert.', price : 180 },
+                    { imgSrc : 'assets/Deserts/d-4.png', name : 'Springle Ice', desc : 'A delightful frozen treat.', price : 180 }
+                ];
+                updateDishes(deserts);
+            }
+            function updateSandwich(){
+                const sandwich = [
+                    { imgSrc : 'assets/Sandwich/sandwich-1.png', name : 'Veg Sandwich', desc : 'A delicious and healthy vegetarian sandwich.', price : 120 },
+                    { imgSrc : 'assets/Sandwich/sandwich-2.png', name : 'Chicken Sandwich', desc : 'Juicy chicken sandwich with fresh veggies.', price : 180 },
+                    { imgSrc : 'assets/Sandwich/sandwich-3.png', name : 'Club Sandwich', desc : 'A classic sandwich with a twist.', price : 160 },
+                    { imgSrc : 'assets/Sandwich/sandwich-4.png', name : 'Cheese Sandwich', desc : 'A delicious and cheesy sandwich.', price : 180 }
+                ];
+                updateDishes(sandwich);
+            }
+            function updateCakes(){
+                const cakes = [
+                    { imgSrc : 'assets/Cake/cake-1.png', name : 'Chocolate Cake', desc : 'A rich and decadent chocolate cake.', price : 150 },
+                    { imgSrc : 'assets/Cake/cake-2.png', name : 'Red Velvet Cake', desc : 'A classic cake with a modern twist.', price : 200 },
+                    { imgSrc : 'assets/Cake/cake-3.png', name : 'Black Forest Cake', desc : 'A delicious and indulgent cake.', price : 180 },
+                    { imgSrc : 'assets/Cake/cake-4.png', name : 'Pineapple Cake', desc : 'A light and fruity cake.', price : 180 }
+                ];
+                updateDishes(cakes);
+            }
+            function updatePureVeg(){
+                const pureVeg = [
+                    { imgSrc : 'assets/Pure Veg/V-1.png', name : 'Veg Biryani', desc : 'Aromatic and flavorful vegetarian biryani.', price : 120 },
+                    { imgSrc : 'assets/Pure Veg/V-2.png', name : 'Veg Pulao', desc : 'A delicious and nutritious vegetarian pulao.', price : 160 },
+                    { imgSrc : 'assets/Pure Veg/V-3.png', name : 'Dal Makhani', desc : 'A rich and creamy lentil dish.', price : 180 }
+                ];
+                updateDishes(pureVeg);
+            }
+            function updatePasta(){
+                const pasta = [
+                    { imgSrc : 'assets/Pasta/Pasta-1.png', name : 'Pasta Alfredo', desc : 'Creamy and delicious pasta.', price : 150 },
+                    { imgSrc : 'assets/Pasta/Pasta-2.png', name : 'Pasta Arrabiata', desc : 'Spicy and flavorful pasta.', price : 200 },
+                    { imgSrc : 'assets/Pasta/Pasta-3.png', name : 'Pasta Carbonara', desc : 'A classic pasta dish with a twist.', price : 180 },
+                    { imgSrc : 'assets/Pasta/Pasta-4.png', name : 'Pasta Primavera', desc : 'A light and fresh pasta dish.', price : 180 }
+                ];
+                updateDishes(pasta);
+            }
+            function updateNoodles(){
+                const noodles = [
+                    { imgSrc : 'assets/Noodles/Noodles-1.png', name : 'Hakka Noodles', desc : 'A popular Indo-Chinese noodle dish.', price : 120 },
+                    { imgSrc : 'assets/Noodles/Noodles-2.png', name : 'Schezwan Noodles', desc : 'Spicy and flavorful noodles.', price : 180 },
+                    { imgSrc : 'assets/Noodles/Noodles-3.png', name : 'Singapore Noodles', desc : 'A delicious and aromatic noodle dish.', price : 160 },
+                    { imgSrc : 'assets/Noodles/Noodles-4.png', name : 'Veg Noodles', desc : 'A tasty and nutritious noodle dish.', price : 180 }
+                ];
+                updateDishes(noodles);
+            }
+            function updateThai(){
+                const Thai = [
+                    { imgSrc : 'assets/Thai/thai-chicken-satay.webp', name : 'Thai Chicken Satay', desc : 'A flavorful and tender grilled chicken skewer with a rich peanut sauce.', price : 450 },
+                    { imgSrc : 'assets/Thai/weeping-tiger-beef.webp', name : 'Weeping Tiger Beef', desc : 'A juicy and spicy grilled beef dish served with a tangy dipping sauce.', price : 550 },
+                    { imgSrc : 'assets/Thai/Tom yum goong.avif', name : 'Tom Yum Goong', desc : 'A flavorful and aromatic Thai shrimp soup with a spicy and tangy broth.', price : 300 },
+                    { imgSrc : 'assets/Thai/Tom-Kha-Gai.jpg', name : 'Tom Kha Gai', desc : 'A rich and creamy Thai coconut chicken soup with a hint of lemongrass.', price : 260 }
+                ];
+                updateDishes(Thai);
+            }
+            function updateDishes(items) {
+                let dishesdata = '';
+                for(let i = 0; i < items.length; i++){
+                    dishesdata += 
+                    `<div class="dish">
+                        <img src="${items[i].imgSrc}" class="dish-image" style="object-fit: cover; width: 100%; height: 60%; border-top-left-radius: 10px; border-top-right-radius: 10px;"/>
+                        <div class="dish-container">
+                            <div class="dish-info">
+                                <h4 class="dish-title">${items[i].name}</h4>
+                                <p class="dish-desc">${items[i].desc}</p>
+                                <p class="dish-price">₹${items[i].price}</p>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+                document.getElementsByClassName('dishes')[0].innerHTML = dishesdata;
+            }
+        
+            function update(obj) {
+                if(obj.id === 'food-item-0'){ 
+                    updateSalad();
+                }
+                else if(obj.id === 'food-item-1'){
+                    updateRolls();
+                }
+                else if(obj.id === 'food-item-2'){ 
+                    updateDeserts();
+                }
+                else if(obj.id === 'food-item-3'){
+                    updateSandwich();
+                }
+                else if(obj.id === 'food-item-4'){
+                    updateCakes();
+                }
+                else if(obj.id === 'food-item-5'){ 
+                    updatePureVeg();
+                }
+                else if(obj.id === 'food-item-6'){ 
+                    updatePasta();
+                }
+                else if(obj.id === 'food-item-7'){ 
+                    updateNoodles();
+                }
+                else if(obj.id === 'food-item-8'){  
+                    updateThai();
+                }
+            }
+    </script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2><img src="assets/logo/logo-5.png" alt=""></h2>
+                <p>Shiro offers delicious, high-quality food made with fresh ingredients. Enjoy great flavors, excellent service, and a cozy dining experience. Come taste the difference!</p>
+                <div class="footer-icons">
+                    <span><img src="assets/logo/Ligth/instagram-light.png" alt=""></span>
+                    <span><img src="assets/logo/Ligth/facebook-light.png" alt=""></span>
+                    <span><img src="assets/logo/Ligth/X.png" alt=""></span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Courses</li>
+                    <li>Reviews</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get in touch</h3>
+                <span class="contact-info"><img src="assets/logo/Ligth/contact-ligth.png" alt="" class="contact-icon">+91 24854 65xxx</span>
+                <p>custcare@Shiro.in</p>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-copyright">Copyright 2024 © 2021 Shiro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
