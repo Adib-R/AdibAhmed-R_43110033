@@ -25,8 +25,6 @@ insert into product values (903,'iqoo z10',1001);
 
 select * from product ;
 
-delete from category where cid=1001;
-
 update category set cid=1003 where cid=1001;
 
 
